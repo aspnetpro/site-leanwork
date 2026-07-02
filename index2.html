@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leanwork — Tecnologia como ativo estratégico</title>
+  <meta name="description" content="Empresa de tecnologia especializada em varejo e digital commerce. Transformamos tecnologia em vantagem competitiva real para médias e grandes empresas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+/* ================================================
+   LEANWORK — Identidade Visual
+   Paleta: monocromática (preto / branco / cinza)
+   Tipografia: Figtree (Google Fonts)
+   Escala: Major Third (×1.25)
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #0a0a0a;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; border: none; background: none; font: inherit; }
+
+:root {
+  --black:    #000000;
+  --white:    #ffffff;
+  --gray-50:  #f9f9f9;
+  --gray-100: #f0f0f0;
+  --gray-200: #e0e0e0;
+  --gray-300: #ccc;
+  --gray-400: #a0a0a0;
+  --gray-500: #7a7a7a;
+  --gray-600: #525252;
+  --gray-700: #3a3a3a;
+  --gray-800: #1f1f1f;
+  --gray-900: #111111;
+  --gray-950: #080808;
+
+  --text-xs:   0.64rem;
+  --text-sm:   0.8rem;
+  --text-base: 1rem;
+  --text-lg:   1.25rem;
+  --text-xl:   1.563rem;
+  --text-2xl:  1.953rem;
+  --text-3xl:  2.441rem;
+  --text-4xl:  3.052rem;
+  --text-5xl:  3.815rem;
+
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-8:  32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-14: 56px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-24: 96px;
+
+  --radius-sm: 4px;
+  --radius:    8px;
+  --radius-lg: 14px;
+
+  --transition:  180ms ease;
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+
+  --section-pad: clamp(72px, 10vw, 120px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(var(--sp-5), 5vw, var(--sp-12));
+}
+
+/* ---------- TAG ---------- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 5px 14px;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 100px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gray-600);
+}
+
+.tag--light {
+  border-color: rgba(255,255,255,.25);
+  color: rgba(255,255,255,.75);
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 11px 22px;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: .01em;
+  transition: background var(--transition), color var(--transition),
+              border-color var(--transition), box-shadow var(--transition),
+              transform var(--transition);
+  white-space: nowrap;
+}
+
+.btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.btn--sm  { padding: var(--sp-2) 18px; font-size: var(--text-xs); }
+.btn--lg  { padding: 14px 28px; font-size: var(--text-base); }
+.btn--full { width: 100%; justify-content: center; }
+
+.btn--primary {
+  background: var(--black);
+  color: var(--white);
+}
+.btn--primary:hover {
+  background: var(--gray-800);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0,0,0,.15);
+}
+.btn--primary:active { transform: translateY(0); box-shadow: none; }
+
+.btn--outline {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,.3);
+}
+.btn--outline:hover {
+  border-color: var(--white);
+  background: rgba(255,255,255,.08);
+  transform: translateY(-1px);
+}
+.btn--outline:active { transform: translateY(0); }
+
+.btn--outline-dark {
+  background: transparent;
+  color: var(--black);
+  border: 1px solid var(--gray-300);
+}
+.btn--outline-dark:hover {
+  border-color: var(--black);
+  transform: translateY(-1px);
+}
+
+/* ---------- SECTION ---------- */
+.section { padding: var(--section-pad) 0; }
+.section--dark  { background: var(--gray-950); color: var(--white); }
+.section--light { background: var(--white);    color: var(--black); }
+
+.section__header {
+  max-width: 700px;
+  margin-bottom: clamp(var(--sp-10), 6vw, 72px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.section__title {
+  font-size: clamp(var(--text-2xl), 3.8vw, var(--text-3xl));
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -.025em;
+}
+
+.section__title--light { color: var(--white); }
+
+.section__sub {
+  font-size: var(--text-base);
+  color: var(--gray-600);
+  max-width: 560px;
+  line-height: 1.8;
+}
+
+/* ---------- REVEAL ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s var(--ease-out), transform .6s var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================================================
+   NAV
+   ================================================ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+.nav.scrolled {
+  background: rgba(8,8,8,.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(255,255,255,.07);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-8);
+  height: 68px;
+}
+
+.nav__logo {
+  font-size: var(--text-lg);
+  font-weight: 900;
+  letter-spacing: -.03em;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  margin-left: auto;
+}
+
+.nav__links a {
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: rgba(255,255,255,.65);
+  transition: color var(--transition), background var(--transition);
+  position: relative;
+}
+
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  bottom: 2px; left: 14px; right: 14px;
+  height: 2px;
+  background: var(--white);
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+
+.nav__links a:hover { color: var(--white); background: rgba(255,255,255,.07); }
+.nav__links a:hover::after { transform: scaleX(1); }
+
+.nav__links a:focus-visible {
+  outline: 2px solid rgba(255,255,255,.6);
+  outline-offset: 2px;
+  color: var(--white);
+}
+
+.nav__cta {
+  flex-shrink: 0;
+  background: var(--white);
+  color: var(--black);
+  transition: background var(--transition), transform var(--transition);
+}
+.nav__cta:hover {
+  background: var(--gray-100);
+  transform: translateY(-1px);
+}
+
+.nav__toggle {
+  display: none;
+  color: var(--white);
+  padding: 6px;
+}
+
+.nav__toggle .icon--close { display: none; }
+.nav__toggle.open .icon--menu { display: none; }
+.nav__toggle.open .icon--close { display: block; }
+
+/* ================================================
+   HERO
+   ================================================ */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  background: var(--gray-950);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero__grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 40%, transparent 100%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+  padding-bottom: var(--sp-20);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+  max-width: 820px;
+}
+
+.hero__title {
+  font-size: clamp(2.6rem, 6.5vw, 5rem);
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: -.035em;
+  margin-top: var(--sp-2);
+}
+
+.hero__title em {
+  font-style: normal;
+  color: var(--gray-400);
+  text-decoration: underline;
+  text-decoration-color: rgba(160,160,160,.25);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+.hero__sub {
+  font-size: clamp(var(--text-base), 1.8vw, var(--text-lg));
+  color: var(--gray-400);
+  line-height: 1.8;
+  max-width: 540px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: var(--sp-8);
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gray-600);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(6px); }
+}
+
+/* ================================================
+   NÚMEROS
+   ================================================ */
+.numbers {
+  background: var(--black);
+  border-top: 1px solid var(--gray-800);
+  border-bottom: 1px solid var(--gray-800);
+  padding: var(--sp-12) 0;
+}
+
+.numbers__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--gray-800);
+}
+
+.numbers__item {
+  background: var(--black);
+  padding: var(--sp-6) var(--sp-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  transition: background var(--transition);
+}
+
+.numbers__item:hover { background: #0d0d0d; }
+
+.numbers__value {
+  font-size: clamp(var(--text-2xl), 3vw, var(--text-3xl));
+  font-weight: 900;
+  letter-spacing: -.035em;
+  color: var(--white);
+  line-height: 1;
+}
+
+.numbers__label {
+  font-size: var(--text-sm);
+  color: var(--gray-400);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ================================================
+   SERVIÇOS
+   ================================================ */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--gray-200);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.service-card {
+  background: var(--white);
+  padding: clamp(var(--sp-8), 4vw, var(--sp-12));
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  transition: background var(--transition), box-shadow var(--transition);
+  position: relative;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--black);
+  transform: scaleX(0);
+  transition: transform 300ms var(--ease-out);
+}
+
+.service-card:hover {
+  background: var(--gray-50);
+}
+
+.service-card:hover::after {
+  transform: scaleX(1);
+}
+
+.service-card__icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  color: var(--gray-800);
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.service-card:hover .service-card__icon {
+  border-color: var(--black);
+  color: var(--black);
+}
+
+.service-card__icon svg { width: 20px; height: 20px; }
+
+.service-card h3 {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.25;
+}
+
+.service-card p {
+  font-size: var(--text-base);
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+.service-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin-top: var(--sp-1);
+}
+
+.service-card__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-2);
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.service-card__list svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--black);
+}
+
+/* ================================================
+   DIFERENCIAIS
+   ================================================ */
+.diffs__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,.08);
+}
+
+.diff-item {
+  padding: clamp(var(--sp-6), 3.5vw, var(--sp-10));
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  transition: background var(--transition);
+}
+
+.diff-item:hover { background: rgba(255,255,255,.03); }
+
+.diff-item__number {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--gray-400);
+}
+
+.diff-item h3 {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.diff-item p {
+  font-size: var(--text-sm);
+  color: var(--gray-400);
+  line-height: 1.7;
+}
+
+.diffs__grid .diff-item:nth-child(4) { grid-column: 1; }
+.diffs__grid .diff-item:nth-child(5) { grid-column: 2; }
+
+/* ================================================
+   CASES
+   ================================================ */
+.cases__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-6);
+}
+
+.case-card {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: clamp(var(--sp-6), 3vw, var(--sp-10));
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  transition: border-color var(--transition),
+              box-shadow 300ms var(--ease-out),
+              transform 300ms var(--ease-out);
+}
+
+.case-card:hover {
+  border-color: var(--gray-400);
+  box-shadow: 0 12px 40px rgba(0,0,0,.1);
+  transform: translateY(-4px);
+}
+
+.case-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.case-card__segment {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--gray-100);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.case-card__service {
+  font-size: var(--text-xs);
+  color: var(--gray-600);
+}
+
+.case-card__title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -.015em;
+}
+
+.case-card__desc {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.case-card__results {
+  display: flex;
+  gap: var(--sp-5);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--gray-100);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.result strong {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1;
+}
+
+.result span {
+  font-size: var(--text-xs);
+  color: var(--gray-600);
+  line-height: 1.4;
+}
+
+/* ================================================
+   SOBRE
+   ================================================ */
+.sobre__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(var(--sp-12), 7vw, var(--sp-24));
+  align-items: start;
+}
+
+.sobre__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+}
+
+.sobre__text p {
+  font-size: var(--text-base);
+  color: var(--gray-400);
+  line-height: 1.85;
+}
+
+.sobre__quote {
+  border-left: 2px solid rgba(255,255,255,.2);
+  padding-left: var(--sp-5);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  font-style: normal;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+.sobre__side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-10);
+}
+
+.pilares__title,
+.stack__title {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: var(--sp-4);
+}
+
+.pilares__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.pilares__list li {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: var(--text-base);
+  color: var(--gray-400);
+  transition: color var(--transition);
+}
+
+.pilares__list li:hover { color: var(--white); }
+
+.pilares__list svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--gray-400);
+}
+
+.stack__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.stack__tags span {
+  padding: 5px 12px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 100px;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--gray-400);
+  transition: border-color var(--transition), color var(--transition),
+              background var(--transition);
+}
+
+.stack__tags span:hover {
+  border-color: rgba(255,255,255,.35);
+  color: var(--white);
+  background: rgba(255,255,255,.04);
+}
+
+/* ================================================
+   CONTATO
+   ================================================ */
+.contato__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(var(--sp-12), 7vw, var(--sp-24));
+  align-items: start;
+}
+
+.contato__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+}
+
+.contato__info .section__title { font-size: clamp(var(--text-2xl), 3vw, var(--text-3xl)); }
+
+.contato__info p {
+  font-size: var(--text-base);
+  color: var(--gray-600);
+  line-height: 1.8;
+}
+
+.contato__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+}
+
+.contato__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  transition: color var(--transition), gap var(--transition);
+}
+
+.contato__link svg { width: 16px; height: 16px; flex-shrink: 0; }
+.contato__link:hover { color: var(--black); gap: 14px; }
+.contato__link:focus-visible { outline: 2px solid var(--black); outline-offset: 3px; border-radius: 2px; }
+
+.contato__form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--gray-800);
+  letter-spacing: .03em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 11px 14px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: var(--text-sm);
+  color: var(--black);
+  background: var(--white);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--gray-400);
+}
+
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible {
+  border-color: var(--black);
+  box-shadow: 0 0 0 3px rgba(0,0,0,.1);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--black);
+  box-shadow: 0 0 0 3px rgba(0,0,0,.08);
+}
+
+.form__note {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  text-align: center;
+}
+
+/* ================================================
+   FOOTER
+   ================================================ */
+.footer {
+  background: var(--black);
+  color: var(--white);
+}
+
+.footer__inner {
+  padding-top: var(--sp-16);
+  padding-bottom: var(--sp-12);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--sp-12);
+  align-items: start;
+  border-bottom: 1px solid var(--gray-800);
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 280px;
+}
+
+.footer__brand p {
+  font-size: var(--text-sm);
+  color: var(--gray-400);
+  line-height: 1.6;
+}
+
+.footer__slogan {
+  font-size: var(--text-xs);
+  letter-spacing: .08em;
+  color: var(--gray-400);
+  font-style: italic;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 56px;
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer__col strong {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+}
+
+.footer__col ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.footer__col a {
+  font-size: var(--text-sm);
+  color: var(--gray-400);
+  transition: color var(--transition);
+}
+
+.footer__col a:hover { color: var(--white); }
+.footer__col a:focus-visible { outline: 1px solid rgba(255,255,255,.5); outline-offset: 3px; border-radius: 2px; }
+
+.footer__bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--sp-5);
+  padding-bottom: var(--sp-5);
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+}
+
+/* ================================================
+   RESPONSIVE
+   ================================================ */
+@media (max-width: 1024px) {
+  .numbers__grid { grid-template-columns: repeat(2, 1fr); }
+  .diffs__grid   { grid-template-columns: repeat(2, 1fr); }
+  .cases__grid   { grid-template-columns: 1fr 1fr; }
+  .sobre__grid,
+  .contato__grid { grid-template-columns: 1fr; gap: var(--sp-12); }
+}
+
+@media (max-width: 768px) {
+  .nav__links,
+  .nav__cta { display: none; }
+
+  .nav__links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 68px; left: 0; right: 0;
+    background: rgba(8,8,8,.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: var(--sp-5) var(--sp-6) var(--sp-8);
+    border-bottom: 1px solid var(--gray-800);
+    gap: var(--sp-1);
+    animation: slideDown .2s ease;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .nav__links.open a {
+    padding: var(--sp-3) 0;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    font-size: var(--text-base);
+  }
+
+  .nav__toggle { display: flex; align-items: center; margin-left: auto; }
+
+  .services__grid { grid-template-columns: 1fr; }
+  .cases__grid    { grid-template-columns: 1fr; }
+  .diffs__grid    { grid-template-columns: 1fr; }
+  .numbers__grid  { grid-template-columns: repeat(2, 1fr); }
+  .form-row       { grid-template-columns: 1fr; }
+  .footer__inner  { grid-template-columns: 1fr; }
+  .footer__nav    { gap: var(--sp-8); }
+  .footer__bottom .container { flex-direction: column; gap: var(--sp-2); text-align: center; }
+
+  .case-card:hover { transform: none; }
+}
+
+@media (max-width: 480px) {
+  .numbers__grid  { grid-template-columns: 1fr 1fr; }
+  .hero__title    { font-size: 2.2rem; }
+  .hero__actions  { flex-direction: column; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo">leanwork</a>
+      <nav>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#cases">Cases</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <a href="#contato" class="btn btn--sm nav__cta">Fale conosco</a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <i data-lucide="menu" class="icon--menu"></i>
+        <i data-lucide="x" class="icon--close"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <div class="hero__grid-bg" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <span class="tag tag--light">live the experience</span>
+      <h1 class="hero__title">
+        Tecnologia como<br>
+        ativo estratégico,<br>
+        <em>não dependência.</em>
+      </h1>
+      <p class="hero__sub">
+        Ajudamos empresas de varejo e digital commerce a estruturar, evoluir e escalar suas operações digitais com impacto mensurável — da estratégia à execução.
+      </p>
+      <div class="hero__actions">
+        <a href="#contato" class="btn btn--primary btn--lg">Falar com especialistas</a>
+        <a href="#servicos" class="btn btn--outline btn--lg">Ver serviços</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <i data-lucide="chevrons-down"></i>
+    </div>
+  </section>
+
+  <!-- ===================== NÚMEROS ===================== -->
+  <section class="numbers">
+    <div class="container numbers__grid">
+      <div class="numbers__item reveal">
+        <span class="numbers__value">10+</span>
+        <span class="numbers__label">anos de experiência</span>
+      </div>
+      <div class="numbers__item reveal">
+        <span class="numbers__value">60+</span>
+        <span class="numbers__label">projetos entregues</span>
+      </div>
+      <div class="numbers__item reveal">
+        <span class="numbers__value">R$10M</span>
+        <span class="numbers__label">meta de receita 2026</span>
+      </div>
+      <div class="numbers__item reveal">
+        <span class="numbers__value">100%</span>
+        <span class="numbers__label">time sênior e especialista</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVIÇOS ===================== -->
+  <section class="section section--light" id="servicos">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="tag">Serviços &amp; Produtos</span>
+        <h2 class="section__title">Soluções para cada estágio<br>da sua operação digital</h2>
+        <p class="section__sub">
+          Não somos uma software house focada só em execução. Atuamos como parceiros tecnológicos estratégicos, assumindo responsabilidade sobre resultado de negócio.
+        </p>
+      </div>
+
+      <div class="services__grid">
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <i data-lucide="users"></i>
+          </div>
+          <h3>Squad Tech</h3>
+          <p>Especialistas em tecnologia e produto operando por sprints com previsibilidade e governança. Componha o time certo para cada fase, sob demanda.</p>
+          <ul class="service-card__list">
+            <li><i data-lucide="check"></i> Arquitetos, fullstack, mobile, QA e DevOps</li>
+            <li><i data-lucide="check"></i> Sprints dinâmicos com cerimônias de acompanhamento</li>
+            <li><i data-lucide="check"></i> SLA e transferência de conhecimento incluídos</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <i data-lucide="layers"></i>
+          </div>
+          <h3>Projetos sob Demanda</h3>
+          <p>Desenvolvimento de ponta a ponta para cenários de alta complexidade: e-commerce, marketplace, aplicativos e integrações enterprise escaláveis.</p>
+          <ul class="service-card__list">
+            <li><i data-lucide="check"></i> Escopo fechado ou aceleradores proprietários</li>
+            <li><i data-lucide="check"></i> Metodologia de diagnóstico e assessment</li>
+            <li><i data-lucide="check"></i> Propriedade intelectual transferida ao cliente</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <i data-lucide="smartphone"></i>
+          </div>
+          <h3>Lean App</h3>
+          <p>Plataforma mobile B2C e B2B para varejo digital. Aumenta performance, conversão e relacionamento direto entre marcas e consumidores via canal mobile.</p>
+          <ul class="service-card__list">
+            <li><i data-lucide="check"></i> Integração com VTEX, Wake e Leancommerce</li>
+            <li><i data-lucide="check"></i> Modelos SaaS e enterprise com personalização visual</li>
+            <li><i data-lucide="check"></i> Foco em Moda, Acessórios, Farma e Beleza</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <i data-lucide="package"></i>
+          </div>
+          <h3>Farma Commerce</h3>
+          <p>E-commerce especialista de alta conformidade para o setor farmacêutico. Construído a partir das complexidades regulatórias e operacionais do segmento.</p>
+          <ul class="service-card__list">
+            <li><i data-lucide="check"></i> Conformidade com regulações ANVISA</li>
+            <li><i data-lucide="check"></i> Integração SNGPC e logística de medicamentos</li>
+            <li><i data-lucide="check"></i> Omnicanalidade para redes com múltiplas lojas</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DIFERENCIAIS ===================== -->
+  <section class="section section--dark" id="diferenciais">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="tag tag--light">Por que a Leanwork</span>
+        <h2 class="section__title section__title--light">Cinco razões pelas quais<br>grandes operações nos escolhem</h2>
+      </div>
+
+      <div class="diffs__grid">
+        <div class="diff-item reveal">
+          <span class="diff-item__number">01</span>
+          <h3>Apoio estratégico em tecnologia</h3>
+          <p>Não vendemos apenas execução. Atuamos como braço estratégico, ajudando a implantar soluções de acordo com o nível de maturidade da operação.</p>
+        </div>
+        <div class="diff-item reveal">
+          <span class="diff-item__number">02</span>
+          <h3>Tecnologia como ativo do cliente</h3>
+          <p>Transferência de código-fonte e propriedade intelectual. Autonomia futura de operação. Redução de lock-in tecnológico. O investimento vira patrimônio.</p>
+        </div>
+        <div class="diff-item reveal">
+          <span class="diff-item__number">03</span>
+          <h3>Decisões orientadas a impacto</h3>
+          <p>Cada iniciativa parte de problemas reais de operação, avaliação consciente de complexidade e métricas claras de sucesso.</p>
+        </div>
+        <div class="diff-item reveal">
+          <span class="diff-item__number">04</span>
+          <h3>Senioridade para grandes operações</h3>
+          <p>Projetos de alto impacto exigem profissionais sêniores com experiência em ambientes complexos. O erro custa caro, e nós trabalhamos para evitá-lo.</p>
+        </div>
+        <div class="diff-item reveal">
+          <span class="diff-item__number">05</span>
+          <h3>Parceria de longo prazo</h3>
+          <p>Atuamos como extensão do time do cliente — não como fornecedor tático. Nossa responsabilidade é a evolução contínua da operação digital.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CASES ===================== -->
+  <section class="section section--light" id="cases">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="tag">Cases</span>
+        <h2 class="section__title">Resultados reais para<br>marcas que importam</h2>
+        <p class="section__sub">
+          Atuamos com empresas que precisam de previsibilidade, governança e crescimento sustentável — não apenas entrega rápida.
+        </p>
+      </div>
+
+      <div class="cases__grid">
+        <article class="case-card reveal">
+          <div class="case-card__header">
+            <span class="case-card__segment">Varejo de Moda</span>
+            <span class="case-card__service">Squad Tech + Lean App</span>
+          </div>
+          <h3 class="case-card__title">Migração de plataforma e lançamento do canal mobile</h3>
+          <p class="case-card__desc">
+            Grande varejista nacional precisava migrar de plataforma legada e lançar um aplicativo de vendas. Entregamos a transição sem downtime e o app com performance acima da média do segmento em 90 dias.
+          </p>
+          <div class="case-card__results">
+            <div class="result">
+              <strong>+32%</strong>
+              <span>conversão no canal mobile</span>
+            </div>
+            <div class="result">
+              <strong>90 dias</strong>
+              <span>do kick-off ao go-live</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card reveal">
+          <div class="case-card__header">
+            <span class="case-card__segment">Farmacêutico</span>
+            <span class="case-card__service">Farma Commerce</span>
+          </div>
+          <h3 class="case-card__title">E-commerce regulatório para rede com mais de 200 lojas</h3>
+          <p class="case-card__desc">
+            Rede de drogarias com operação física consolidada precisava de presença digital com conformidade ANVISA. Estruturamos a plataforma integrando estoque, receituário e logística de medicamentos controlados.
+          </p>
+          <div class="case-card__results">
+            <div class="result">
+              <strong>+200</strong>
+              <span>lojas integradas</span>
+            </div>
+            <div class="result">
+              <strong>100%</strong>
+              <span>conformidade regulatória</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card reveal">
+          <div class="case-card__header">
+            <span class="case-card__segment">Marketplace B2B</span>
+            <span class="case-card__service">Leanwork Lab</span>
+          </div>
+          <h3 class="case-card__title">Middleware enterprise para atacadista de alta complexidade</h3>
+          <p class="case-card__desc">
+            Atacadista com múltiplos ERPs e canais precisava de uma camada de integração confiável. Desenvolvemos um middleware proprietário com monitoramento em tempo real e zero downtime em picos de sazonalidade.
+          </p>
+          <div class="case-card__results">
+            <div class="result">
+              <strong>Zero</strong>
+              <span>downtime em Black Friday</span>
+            </div>
+            <div class="result">
+              <strong>4 ERPs</strong>
+              <span>integrados em uma camada</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE ===================== -->
+  <section class="section section--dark" id="sobre">
+    <div class="container">
+      <div class="sobre__grid">
+        <div class="sobre__text reveal">
+          <span class="tag tag--light">Sobre a Leanwork</span>
+          <h2 class="section__title section__title--light">
+            A interseção entre estratégia, tecnologia e execução.
+          </h2>
+          <p>
+            A Leanwork é uma empresa de tecnologia especializada em varejo e digital commerce. Ajudamos empresas a transformar tecnologia em vantagem competitiva real, com governança, previsibilidade e autonomia.
+          </p>
+          <p>
+            Diferente do modelo predominante de mercado, permitimos que o cliente adquira a inteligência e propriedade intelectual de aplicativos, plataformas e produtos desenvolvidos. Isso transforma o investimento em patrimônio digital, não em dependência de fornecedor.
+          </p>
+          <blockquote class="sobre__quote">
+            "Tecnologia estratégica deve pertencer a quem opera o negócio."
+          </blockquote>
+        </div>
+
+        <div class="sobre__side reveal">
+          <div class="pilares">
+            <h3 class="pilares__title">Pilares do grupo</h3>
+            <ul class="pilares__list">
+              <li>
+                <i data-lucide="trending-up"></i>
+                Sustentabilidade e previsibilidade financeira
+              </li>
+              <li>
+                <i data-lucide="award"></i>
+                Consolidação de marca
+              </li>
+              <li>
+                <i data-lucide="zap"></i>
+                Experiência e eficiência operacional
+              </li>
+              <li>
+                <i data-lucide="binoculars"></i>
+                Olhar para o futuro
+              </li>
+            </ul>
+          </div>
+
+          <div class="stack">
+            <h3 class="stack__title">Stack técnica</h3>
+            <div class="stack__tags">
+              <span>C# / .NET</span>
+              <span>React / Next.js</span>
+              <span>Angular</span>
+              <span>Node.js</span>
+              <span>Go</span>
+              <span>Python</span>
+              <span>Swift</span>
+              <span>Kotlin</span>
+              <span>Azure</span>
+              <span>AWS</span>
+              <span>Docker</span>
+              <span>PostgreSQL</span>
+              <span>MongoDB</span>
+              <span>Redis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATO ===================== -->
+  <section class="section section--light" id="contato">
+    <div class="container">
+      <div class="contato__grid">
+        <div class="contato__info reveal">
+          <span class="tag">Contato</span>
+          <h2 class="section__title">Pronto para transformar tecnologia em resultado?</h2>
+          <p>Conte seu desafio. Nosso time faz um diagnóstico inicial e apresenta a abordagem mais adequada para o seu contexto.</p>
+
+          <div class="contato__links">
+            <a href="mailto:contato@leanwork.com.br" class="contato__link">
+              <i data-lucide="mail"></i>
+              contato@leanwork.com.br
+            </a>
+            <a href="https://www.linkedin.com/company/leanwork" target="_blank" rel="noopener" class="contato__link">
+              <i data-lucide="linkedin"></i>
+              /company/leanwork
+            </a>
+          </div>
+        </div>
+
+        <form class="contato__form reveal" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Sua empresa">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com.br" required>
+          </div>
+          <div class="form-group">
+            <label for="servico">Serviço de interesse</label>
+            <select id="servico" name="servico">
+              <option value="">Selecione um serviço</option>
+              <option value="squad">Squad Tech</option>
+              <option value="projeto">Projetos sob Demanda</option>
+              <option value="lean-app">Lean App</option>
+              <option value="farma">Farma Commerce</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte brevemente o seu desafio..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            Enviar mensagem
+            <i data-lucide="arrow-right"></i>
+          </button>
+          <p class="form__note">Retornamos em até 1 dia útil.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo">leanwork</a>
+        <p>Tecnologia como ativo estratégico, não dependência.</p>
+        <span class="footer__slogan">live the experience</span>
+      </div>
+      <nav class="footer__nav">
+        <div class="footer__col">
+          <strong>Serviços</strong>
+          <ul>
+            <li><a href="#servicos">Squad Tech</a></li>
+            <li><a href="#servicos">Projetos sob Demanda</a></li>
+            <li><a href="#servicos">Lean App</a></li>
+            <li><a href="#servicos">Farma Commerce</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <strong>Empresa</strong>
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#cases">Cases</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>&copy; 2026 Leanwork Group. Todos os direitos reservados.</span>
+        <span>São Paulo, Brasil</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+  lucide.createIcons();
+
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+  });
+
+  links.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const nav = document.getElementById('nav');
+
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leanwork — Tecnologia como ativo estratégico</title>
+  <meta name="description" content="Empresa de tecnologia especializada em varejo e digital commerce. Transformamos tecnologia em vantagem competitiva real para médias e grandes empresas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo">leanwork</a>
+      <nav>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#cases">Cases</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <a href="#contato" class="btn btn--accent btn--sm nav__cta">Fale conosco</a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <i data-lucide="menu" class="icon--menu"></i>
+        <i data-lucide="x" class="icon--close"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO (split layout) ===================== -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__grid-bg"></div>
+      <div class="hero__glow"></div>
+    </div>
+
+    <div class="container hero__inner">
+
+      <!-- Left: proposta de valor -->
+      <div class="hero__content">
+        <span class="tag">live the experience</span>
+        <h1 class="hero__title">
+          Tecnologia como<br>
+          ativo estratégico,<br>
+          <em>não dependência.</em>
+        </h1>
+        <p class="hero__sub">
+          Ajudamos empresas de varejo e digital commerce a estruturar, evoluir e escalar suas operações digitais com impacto mensurável — da estratégia à execução.
+        </p>
+        <div class="hero__actions">
+          <a href="#contato" class="btn btn--accent btn--lg">Falar com especialistas</a>
+          <a href="#servicos" class="btn btn--ghost btn--lg">Ver serviços</a>
+        </div>
+      </div>
+
+      <!-- Right: stats panel glassmorphism -->
+      <div class="hero__stats-panel" aria-label="Números da Leanwork">
+        <div class="hero__stat reveal">
+          <span class="numbers__value">10+</span>
+          <span class="numbers__label">anos de experiência</span>
+        </div>
+        <div class="hero__stat reveal">
+          <span class="numbers__value">60+</span>
+          <span class="numbers__label">projetos entregues</span>
+        </div>
+        <div class="hero__stat reveal">
+          <span class="numbers__value">R$10M</span>
+          <span class="numbers__label">meta de receita 2026</span>
+        </div>
+        <div class="hero__stat reveal">
+          <span class="numbers__value">100%</span>
+          <span class="numbers__label">time sênior e especialista</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <i data-lucide="chevrons-down"></i>
+    </div>
+  </section>
+
+  <!-- ===================== SERVIÇOS ===================== -->
+  <section class="section section--light" id="servicos">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="tag tag--dark">Serviços &amp; Produtos</span>
+        <h2 class="section__title">Soluções para cada estágio<br>da sua operação digital</h2>
+        <p class="section__sub">
+          Não somos uma software house focada só em execução. Atuamos como parceiros tecnológicos estratégicos, assumindo responsabilidade sobre resultado de negócio.
+        </p>
+      </div>
+
+      <div class="services__grid">
+
+        <!-- Squad Tech (featured) -->
+        <article class="service-card service-card--featured reveal">
+          <div class="service-card__header">
+            <div class="service-card__icon">
+              <i data-lucide="users"></i>
+            </div>
+            <span class="service-card__badge">Mais popular</span>
+          </div>
+          <h3>Squad Tech</h3>
+          <p>Especialistas em tecnologia e produto operando por sprints com previsibilidade e governança. Componha o time certo para cada fase, sob demanda.</p>
+          <ul class="service-card__list">
+            <li><i data-lucide="check"></i> Arquitetos, fullstack, mobile, QA e DevOps</li>
+            <li><i data-lucide="check"></i> Sprints dinâmicos com cerimônias de acompanhamento</li>
+            <li><i data-lucide="check"></i> SLA e transferência de conhecimento incluídos</li>
+          </ul>
+          <a href="#contato" class="service-card__cta">
+            Falar sobre Squad Tech
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </article>
+
+        <!-- Projetos sob demanda -->
+        <article class="service-card reveal">
+          <div class="service-card__header">
+            <div class="service-card__icon">
+              <i data-lucide="layers"></i>
+            </div>
+          </div>
+          <h3>Projetos sob Demanda</h3>
+          <p>Desenvolvimento de ponta a ponta para cenários de alta complexidade: e-commerce, marketplace, aplicativos e integrações enterprise escaláveis.</p>
+          <ul class="service-card__list">
+            <li><i data-lucide="check"></i> Escopo fechado ou aceleradores proprietários</li>
+            <li><i data-lucide="check"></i> Metodologia de diagnóstico e assessment</li>
+            <li><i data-lucide="check"></i> Propriedade intelectual transferida ao cliente</li>
+          </ul>
+          <a href="#contato" class="service-card__cta">
+            Conhecer
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </article>
+
+        <!-- Lean App -->
+        <article class="service-card reveal">
+          <div class="service-card__header">
+            <div class="service-card__icon">
+              <i data-lucide="smartphone"></i>
+            </div>
+          </div>
+          <h3>Lean App</h3>
+          <p>Plataforma mobile B2C e B2B para varejo digital. Aumenta performance, conversão e relacionamento direto entre marcas e consumidores via canal mobile.</p>
+          <ul class="service-card__list">
+            <li><i data-lucide="check"></i> Integração com VTEX, Wake e Leancommerce</li>
+            <li><i data-lucide="check"></i> Modelos SaaS e enterprise com personalização visual</li>
+            <li><i data-lucide="check"></i> Foco em Moda, Acessórios, Farma e Beleza</li>
+          </ul>
+          <a href="#contato" class="service-card__cta">
+            Conhecer
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </article>
+
+        <!-- Farma Commerce -->
+        <article class="service-card reveal">
+          <div class="service-card__header">
+            <div class="service-card__icon">
+              <i data-lucide="package"></i>
+            </div>
+          </div>
+          <h3>Farma Commerce</h3>
+          <p>E-commerce especialista de alta conformidade para o setor farmacêutico. Construído a partir das complexidades regulatórias e operacionais do segmento.</p>
+          <ul class="service-card__list">
+            <li><i data-lucide="check"></i> Conformidade com regulações ANVISA</li>
+            <li><i data-lucide="check"></i> Integração SNGPC e logística de medicamentos</li>
+            <li><i data-lucide="check"></i> Omnicanalidade para redes com múltiplas lojas</li>
+          </ul>
+          <a href="#contato" class="service-card__cta">
+            Conhecer
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DIFERENCIAIS ===================== -->
+  <section class="section section--dark" id="diferenciais">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="tag">Por que a Leanwork</span>
+        <h2 class="section__title section__title--light">Cinco razões pelas quais<br>grandes operações nos escolhem</h2>
+      </div>
+
+      <div class="diffs__grid">
+        <div class="diff-item reveal">
+          <span class="diff-item__number">01</span>
+          <h3>Apoio estratégico em tecnologia</h3>
+          <p>Não vendemos apenas execução. Atuamos como braço estratégico, ajudando a implantar soluções de acordo com o nível de maturidade da operação.</p>
+        </div>
+        <div class="diff-item reveal">
+          <span class="diff-item__number">02</span>
+          <h3>Tecnologia como ativo do cliente</h3>
+          <p>Transferência de código-fonte e propriedade intelectual. Autonomia futura de operação. Redução de lock-in tecnológico. O investimento vira patrimônio.</p>
+        </div>
+        <div class="diff-item reveal">
+          <span class="diff-item__number">03</span>
+          <h3>Decisões orientadas a impacto</h3>
+          <p>Cada iniciativa parte de problemas reais de operação, avaliação consciente de complexidade e métricas claras de sucesso.</p>
+        </div>
+        <div class="diff-item reveal">
+          <span class="diff-item__number">04</span>
+          <h3>Senioridade para grandes operações</h3>
+          <p>Projetos de alto impacto exigem profissionais sêniores com experiência em ambientes complexos. O erro custa caro, e nós trabalhamos para evitá-lo.</p>
+        </div>
+        <div class="diff-item reveal">
+          <span class="diff-item__number">05</span>
+          <h3>Parceria de longo prazo</h3>
+          <p>Atuamos como extensão do time do cliente — não como fornecedor tático. Nossa responsabilidade é a evolução contínua da operação digital.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CASES ===================== -->
+  <section class="section section--light" id="cases">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="tag tag--dark">Cases</span>
+        <h2 class="section__title">Resultados reais para<br>marcas que importam</h2>
+        <p class="section__sub">
+          Atuamos com empresas que precisam de previsibilidade, governança e crescimento sustentável — não apenas entrega rápida.
+        </p>
+      </div>
+
+      <div class="cases__grid">
+        <article class="case-card reveal">
+          <div class="case-card__header">
+            <span class="case-card__segment">Varejo de Moda</span>
+            <span class="case-card__service">Squad Tech + Lean App</span>
+          </div>
+          <div class="case-card__body">
+            <h3 class="case-card__title">Migração de plataforma e lançamento do canal mobile</h3>
+            <p class="case-card__desc">
+              Grande varejista nacional precisava migrar de plataforma legada e lançar um aplicativo de vendas. Entregamos a transição sem downtime e o app com performance acima da média do segmento em 90 dias.
+            </p>
+            <div class="case-card__results">
+              <div class="result">
+                <strong>+32%</strong>
+                <span>conversão no canal mobile</span>
+              </div>
+              <div class="result">
+                <strong>90 dias</strong>
+                <span>do kick-off ao go-live</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card reveal">
+          <div class="case-card__header">
+            <span class="case-card__segment">Farmacêutico</span>
+            <span class="case-card__service">Farma Commerce</span>
+          </div>
+          <div class="case-card__body">
+            <h3 class="case-card__title">E-commerce regulatório para rede com mais de 200 lojas</h3>
+            <p class="case-card__desc">
+              Rede de drogarias com operação física consolidada precisava de presença digital com conformidade ANVISA. Estruturamos a plataforma integrando estoque, receituário e logística de medicamentos controlados.
+            </p>
+            <div class="case-card__results">
+              <div class="result">
+                <strong>+200</strong>
+                <span>lojas integradas</span>
+              </div>
+              <div class="result">
+                <strong>100%</strong>
+                <span>conformidade regulatória</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card reveal">
+          <div class="case-card__header">
+            <span class="case-card__segment">Marketplace B2B</span>
+            <span class="case-card__service">Leanwork Lab</span>
+          </div>
+          <div class="case-card__body">
+            <h3 class="case-card__title">Middleware enterprise para atacadista de alta complexidade</h3>
+            <p class="case-card__desc">
+              Atacadista com múltiplos ERPs e canais precisava de uma camada de integração confiável. Desenvolvemos um middleware proprietário com monitoramento em tempo real e zero downtime em picos de sazonalidade.
+            </p>
+            <div class="case-card__results">
+              <div class="result">
+                <strong>Zero</strong>
+                <span>downtime em Black Friday</span>
+              </div>
+              <div class="result">
+                <strong>4 ERPs</strong>
+                <span>integrados em uma camada</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE ===================== -->
+  <section class="section section--dark" id="sobre">
+    <div class="container">
+      <div class="sobre__grid">
+        <div class="sobre__text reveal">
+          <span class="tag">Sobre a Leanwork</span>
+          <h2 class="section__title section__title--light">
+            A interseção entre estratégia, tecnologia e execução.
+          </h2>
+          <p>
+            A Leanwork é uma empresa de tecnologia especializada em varejo e digital commerce. Ajudamos empresas a transformar tecnologia em vantagem competitiva real, com governança, previsibilidade e autonomia.
+          </p>
+          <p>
+            Diferente do modelo predominante de mercado, permitimos que o cliente adquira a inteligência e propriedade intelectual de aplicativos, plataformas e produtos desenvolvidos. Isso transforma o investimento em patrimônio digital, não em dependência de fornecedor.
+          </p>
+          <blockquote class="sobre__quote">
+            "Tecnologia estratégica deve pertencer a quem opera o negócio."
+          </blockquote>
+        </div>
+
+        <div class="sobre__side reveal">
+          <div class="pilares">
+            <h3 class="pilares__title">Pilares do grupo</h3>
+            <ul class="pilares__list">
+              <li>
+                <i data-lucide="trending-up"></i>
+                Sustentabilidade e previsibilidade financeira
+              </li>
+              <li>
+                <i data-lucide="award"></i>
+                Consolidação de marca
+              </li>
+              <li>
+                <i data-lucide="zap"></i>
+                Experiência e eficiência operacional
+              </li>
+              <li>
+                <i data-lucide="binoculars"></i>
+                Olhar para o futuro
+              </li>
+            </ul>
+          </div>
+
+          <div class="stack">
+            <h3 class="stack__title">Stack técnica</h3>
+            <div class="stack__tags">
+              <span>C# / .NET</span>
+              <span>React / Next.js</span>
+              <span>Angular</span>
+              <span>Node.js</span>
+              <span>Go</span>
+              <span>Python</span>
+              <span>Swift</span>
+              <span>Kotlin</span>
+              <span>Azure</span>
+              <span>AWS</span>
+              <span>Docker</span>
+              <span>PostgreSQL</span>
+              <span>MongoDB</span>
+              <span>Redis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATO ===================== -->
+  <section class="section section--light" id="contato">
+    <div class="container">
+      <div class="contato__grid">
+        <div class="contato__info reveal">
+          <span class="tag tag--dark">Contato</span>
+          <h2 class="section__title">Pronto para transformar tecnologia em resultado?</h2>
+          <p>Conte seu desafio. Nosso time faz um diagnóstico inicial e apresenta a abordagem mais adequada para o seu contexto.</p>
+
+          <div class="contato__links">
+            <a href="mailto:contato@leanwork.com.br" class="contato__link">
+              <i data-lucide="mail"></i>
+              contato@leanwork.com.br
+            </a>
+            <a href="https://www.linkedin.com/company/leanwork" target="_blank" rel="noopener" class="contato__link">
+              <i data-lucide="linkedin"></i>
+              /company/leanwork
+            </a>
+          </div>
+        </div>
+
+        <form class="contato__form reveal" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Sua empresa">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com.br" required>
+          </div>
+          <div class="form-group">
+            <label for="servico">Serviço de interesse</label>
+            <select id="servico" name="servico">
+              <option value="">Selecione um serviço</option>
+              <option value="squad">Squad Tech</option>
+              <option value="projeto">Projetos sob Demanda</option>
+              <option value="lean-app">Lean App</option>
+              <option value="farma">Farma Commerce</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte brevemente o seu desafio..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--accent btn--full">
+            Enviar mensagem
+            <i data-lucide="arrow-right"></i>
+          </button>
+          <p class="form__note">Retornamos em até 1 dia útil.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo">leanwork</a>
+        <p>Tecnologia como ativo estratégico, não dependência.</p>
+        <span class="footer__slogan">live the experience</span>
+      </div>
+      <nav class="footer__nav">
+        <div class="footer__col">
+          <strong>Serviços</strong>
+          <ul>
+            <li><a href="#servicos">Squad Tech</a></li>
+            <li><a href="#servicos">Projetos sob Demanda</a></li>
+            <li><a href="#servicos">Lean App</a></li>
+            <li><a href="#servicos">Farma Commerce</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <strong>Empresa</strong>
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#cases">Cases</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© 2026 Leanwork Group. Todos os direitos reservados.</span>
+        <span>São Paulo, Brasil</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

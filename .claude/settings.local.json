@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s \"C:\\\\Users\\\\Michel\\\\OneDrive\\\\Área de Trabalho\\\\2026 - DEV .NET IA 10X\\\\Demos\\\\01-website\")",
+      "PowerShell(Get-Item *)",
+      "PowerShell(cmd /c mklink | findstr \"01-website\" 2>&1 ; \\(Get-Item \"C:\\\\Users\\\\Michel\\\\OneDrive\\\\Área de Trabalho\\\\2026 - DEV .NET IA 10X\\\\Demos\\\\01-website\" -Force\\).LinkTarget)",
+      "PowerShell(fsutil reparsepoint *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Michel\\\\OneDrive\\\\Área de Trabalho\\\\2026 - DEV .NET IA 10X\\\\Demos\" | ForEach-Object { \"$\\(\\($_.FullName\\).Length\\) - $\\($_.FullName\\)\" })",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Michel\\\\OneDrive\\\\Área de Trabalho\\\\2026 - DEV .NET IA 10X\\\\Demos\\\\01-website\" -Force)",
+      "Bash(Select-Object Name, Mode, Length)",
+      "PowerShell(python -c \"import pypdf; print\\('pypdf ok'\\)\" 2>&1; python -c \"import pdfplumber; print\\('pdfplumber ok'\\)\" 2>&1; python -c \"import fitz; print\\('fitz ok'\\)\" 2>&1)",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Michel\\\\OneDrive\\\\Área de Trabalho\\\\2026 - DEV .NET IA 10X\\\\Demos\\\\01-website\\\\index.html\")",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"B2B technology company digital commerce retail enterprise professional modern\" --design-system -p \"Leanwork\")",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"enterprise B2B SaaS tech professional dark modern\" --domain style -n 5)",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"enterprise hero landing social-proof contact\" --domain landing -n 5)",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"professional modern enterprise\" --domain typography -n 3)"
+    ]
+  },
+  "disabledMcpjsonServers": [
+    "playwright"
+  ]
+}
